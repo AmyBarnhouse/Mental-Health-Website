@@ -8,6 +8,8 @@ body{
     background-color: lightblue;
 }
 
+/*from w3schools, simplification of padding in form by dealing with top-bottom-left-right at the same time*/
 form{
     padding: 25px;
 }
+
