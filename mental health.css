@@ -6,9 +6,15 @@ h1{
 }
 body{
     background-color: lightblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*from w3schools, simplification of padding in form by dealing with top-bottom-left-right at the same time*/
-form{
-    padding: 25px;
+
+
+img {
+    width: 100%;
+    height: 75px;
+    background-size: contain;
+
 }
