@@ -1,15 +1,21 @@
-h1{
+
+/* body{
+    background-color: #faf5fb;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #7913cc
+} */
+
+/* h1{
     font-family: serif;
     color:darkblue;
     text-align:  center;
     text-decoration-line: underline;
-}
-body{
-    background-color: #faf5fb;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    color: #7913cc
-}
+} */
 
+.stone-picture {
+    height: 500px;
+    width: 700px;
+}
 
 img {
     width: 100%;
@@ -41,12 +47,18 @@ img {
   }
 
 
+
 /*from w3schools lists*/
 ul.list-unstyled{
     display: inline-block;
-    text-align: left;
-}
-
-div.container{
     text-align: center;
 }
+
+form {
+    margin: 20px;
+}
+
+
+/* div.container{
+    text-align: center;
+} */
