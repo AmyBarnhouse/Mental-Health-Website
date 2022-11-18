@@ -14,8 +14,8 @@ function emailAlert() {
     alert("We promise to only send you helpful and relevant information.")
 }
 
-document.getElementById("questionBox").addEventListener("click", userQInput);
+document.getElementById("askUs").addEventListener("click", userQInput);
 
 function userQInput() {
-  document.getElementById("tests").innerHTML = "Thank you for signing up! :)";
+    document.getElementById("qBox").innerHTML;
 }

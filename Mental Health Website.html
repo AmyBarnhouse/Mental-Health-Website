@@ -24,7 +24,7 @@
           <a class="nav-link" href="#inContact">Sign Up!</a>
         </li>
         <li class = "nav-item">
-          <a class="nav-link" id="questionBox">Ask Us</a>
+          <a class="nav-link" href="#messagePopUp" id="askUs">Ask Us</a>
         </li>
       </ul>
       </header>
@@ -102,7 +102,7 @@
           <!-- from Bootstrap - basic example - form input group documentation -->
           <div class="input-group mb-3">
             <span class="input-group-text">Email Address</span>
-            <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" aria-label="Username">
+            <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" required>
           </div>
           <!-- from Bootstrap - default select - form select documentation -->
           <div class="mb-3">
@@ -117,25 +117,22 @@
           </div>
             <!-- from Bootstrap - custom file input - form input group documentation -->
             <div class="mb-3">
-                <label for="formFileSm" class="form-label">This service is for students only - please upload a picture of your student ID for access to our support...</label>
+                <label for="formFileSm" class="form-label" required>This service is for students only - please upload a picture of your student ID for access to our support...</label>
                 <input class="form-control form-control-sm" id="formFileSm" type="file">
             </div>
             <!-- from Bootstrap - default checkbox - checks and radios documentation -->
-            <div class="form-check">
+            <div class="form-check" required>
               <input class="form-check-input" type="checkbox" value="">
               <label class="form-check-label" for="flexCheckDefault">
                 I accept the <a href="#">terms and conditions</a>
               </label>
             </div>
             <div>
-              <button class="w-20 btn btn-lg btn-primary mb-3" type="submit" id="submitBtn">Submit</button>
+              <button class="w-20 btn btn-lg btn-primary" type="submit" id="submitBtn">Submit</button>
+              <div id="tests"></div>
             </div>
         </form>
-            <div class="b-example-divider" id="MessagePopUp"></div>
-            <div class="input-group mb-3 mt-3">
-              <input type="text" class="form-control" placeholder="Type your query in here..." aria-label="Recipient's username" aria-describedby="button-addon2">
-              <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
-            </div>
+        <div id="qBox"></div>
         <!--From Bootstrap examples 2017-->   
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <script src="javaScript.js"></script>
@@ -150,3 +147,10 @@ freeCodeCamp (2022) '(New) Responsive Web Design'. Available at: https://www.fre
 Dönmez, B. Stone stack [Photograph]. Available at: https://unsplash.com/photos/eofm5R5f9Kw (Accessed: 2.11.2022)
 Bootstrap 'Heroes'. Available at: https://getbootstrap.com/docs/5.2/examples/heroes/ (Accessed: 2.11.2022)
 -->
+
+
+<!-- <div class="b-example-divider" id="MessagePopUp"></div>
+            <div class="input-group mb-3 mt-3">
+              <input type="text" class="form-control" placeholder="Type your query in here..." aria-label="Recipient's username" aria-describedby="button-addon2">
+              <button class="btn btn-primary" type="button" id="button-addon2">Send</button>
+            </div> -->
