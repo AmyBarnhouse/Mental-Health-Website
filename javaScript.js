@@ -22,16 +22,15 @@ function userQInput() {
 
 // create 2 data_set
 var data1 = [
-  {group: "A", value: 4},
-  {group: "B", value: 16},
-  {group: "C", value: 8}
+  {group: "6 - 10 years old", value: 25},
+  {group: "11 - 16 years old", value: 75},
+  {group: "17 - 23 years old", value: 50}
 ];
 
 var data2 = [
-  {group: "A", value: 7},
-  {group: "B", value: 1},
-  {group: "C", value: 20},
-  {group: "D", value: 10}
+  {group: "6 - 10 years old", value: 33},
+  {group: "11 - 16 years old", value: 67},
+  {group: "17 - 23 years old", value: 95},
 ];
 
 // set the dimensions and margins of the graph
