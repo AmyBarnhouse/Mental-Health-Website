@@ -70,7 +70,16 @@
             <div class="container aos-init aos-animate" data-aos="fade-up">
               <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100"> 
-                  <img src="" class="" alt=""> <!--add svg here!-->
+                  <!-- Load d3.js -->
+                  <script src="https://d3js.org/d3.v4.js"></script>
+
+                  <!-- Add 2 buttons -->
+                  <button onclick="update(data1)">Variable 1</button>
+                  <button onclick="update(data2)">Variable 2</button>
+
+                  <!-- Create a div where the graph will take place -->
+                  <div id="barChart"></div>
+
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
                   <h3>**place descriptions of svg here - buttons to alter bar chart**</h3>
