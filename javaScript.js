@@ -1,7 +1,6 @@
 
-/* Displays thank you message after user submits form */ 
 document.getElementById("submitBtn").addEventListener("click", thankYouMsg);
-
+/** Function produces a 'thank you' message in response to the user clicking Submit after filling out their contact details. */
 function thankYouMsg() {
   document.getElementById("tests").innerHTML = "Thank you for signing up! :)";
 }
