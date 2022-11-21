@@ -33,7 +33,6 @@ var data2 = [
   {group: "17 - 23 years old", value: 95},
 ];
 
-var data3 = 
 
 var margin = {top: 30, right: 30, bottom: 70, left: 60},
    width = 460 - margin.left - margin.right,
