@@ -9,6 +9,26 @@
     </head>
 
     <body>
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Drop us a message here...</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <form>
+      <div class="modal-body">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Send</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
       <header>
       <!--from Boostrap - Base nav - navs and tabs documentation-->
       <ul class="nav justify-content-center">
@@ -25,7 +45,7 @@
           <a class="nav-link" href="#inContact">Sign Up!</a>
         </li>
         <li class = "nav-item">
-          <a class="nav-link" href="#messagePopUp" id="askUs">Ask Us</a>
+          <a class="nav-link" href="#" id="askUs" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ask Us</a>
         </li>
       </ul>
       </header>
@@ -49,7 +69,7 @@
               </div>
               <!-- unsplash image -->
               <div class="col-10 col-sm-8 col-lg-6">
-                <img src="Stone peaceful stack.jpg" id="stone-picture" class="d-block mx-lg-auto img-fluid stone-picture" alt="Image of pebbles stacked up" width="700" height="500" loading="lazy">
+                <img src="stone-picture.jpg" id="stone-picture" class="d-block mx-lg-auto img-fluid stone-picture" alt="Image of pebbles stacked up" loading="lazy">
               </div>
             </div>
           </div>
