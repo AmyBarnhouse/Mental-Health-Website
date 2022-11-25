@@ -1,9 +1,5 @@
 
-/* 
-.stone-picture {
-    height: 500px;
-    width: 700px;
-} */
+
 
 img {
     width: 100%;
@@ -20,7 +16,7 @@ img {
 }
 
 /*from Bootstrap navbar documentation*/
-.nav{
+.nav, .active{
     --bs-link-color: #a643f7;
     --bs-link-hover-color: #a643f7;
 }
@@ -47,6 +43,3 @@ form {
 }
 
 
-/* div.container{
-    text-align: center;
-} */

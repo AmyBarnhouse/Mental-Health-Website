@@ -31,25 +31,22 @@
 </div>
       <header>
       <!--from Boostrap - Base nav - navs and tabs documentation-->
-      <ul class="nav justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#youngPeople">Mental Health and Young People</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#keyInfo">Key Information</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#inContact">Sign Up!</a>
-        </li>
-        <li class = "nav-item">
-          <a class="nav-link" href="#" id="askUs" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ask Us</a>
-        </li>
-      </ul>
+      <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4">Mental Health</span>
+          </a>
+    
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#youngPeople" class="nav-link">Mental Health and Young People</a></li>
+            <li class="nav-item"><a href="#keyInfo" class="nav-link">Key Information</a></li>
+            <li class="nav-item"><a href="#inContact" class="nav-link">Sign Up!</a></li>
+            <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">AskUs</a></li>
+          </ul>
+        </header>
+      </div>
       </header>
-        <h1>Mental Health and Wellbeing</h1>
         <!--from Bootstrap - Responsive right-aligned hero with image - Heroes documentation-->
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -93,12 +90,14 @@
                 <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100"> 
 
                   <!-- Add 2 buttons -->
-                  <button onclick="update(data1)">Girls</button>
-                  <button onclick="update(data2)">Boys</button>
-                  <button onclick="update(data3)">All</button>
+                  <button onclick="update('var1')">Variable 1</button>
+                  <button onclick="update('var2')">Variable 2</button>
+                  
 
                   <!-- Create a div where the graph will take place -->
-                  <div id="barChart"></div>
+                  <div id="my_dataviz"></div>
+
+
 
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
