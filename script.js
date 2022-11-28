@@ -118,6 +118,8 @@ const y = d3.scaleLinear()
   .range([height, 0])
 const yAxis = svg.append('g')
   .attr('class', 'myYaxis')
+
+
 // A function that create / update the plot for a given variable:
 function update (selectedVar) {
   // Parse the Data
@@ -145,6 +147,19 @@ function update (selectedVar) {
       .attr('width', x.bandwidth())
       .attr('height', function (d) { return height - y(d[selectedVar]) })
       .attr('fill', '#69b3a2')
+      // .on("mouseover", function(d, i) {
+      //   tooltip.html(`Data: ${d}`).style("visibility", "visible");
+      //   d3.select(this)
+      //     .attr("fill", shadeColor(bar_color, -15));
+      // })
+      // .on("mousemover", function(){
+      //   tooltip
+      //     .style("top", (event.pageY-10)+"px")
+      //     .style("left",(event.pageX+10)+"px");
+      // })
+      // .on("mouseout", function() {
+      //   tooltip.html(``).style("visibility", "hidden");
+      //   d3.select(this).attr("fill", bar_color);
   })
 }
 
