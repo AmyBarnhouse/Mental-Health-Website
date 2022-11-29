@@ -32,19 +32,36 @@
 </div>
       <header>
       <!--from Boostrap - Base nav - navs and tabs documentation-->
-      <div class="container" id="topOfPage">
+      <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-            <span class="fs-4">Mental Health</span>
-          </a>
-
-          <ul class="nav  nav-pills">
-            <li class="nav-item"><a href="#" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="#youngPeople" class="nav-link">Mental Health and Young People</a></li>
-            <li class="nav-item"><a href="#keyInfo" class="nav-link">Key Information</a></li>
-            <li class="nav-item"><a href="#inContact" class="nav-link">Sign Up!</a></li>
-            <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop">AskUs</a></li>
-          </ul>
+          <nav class="navbar fixed-top navbar-expand-lg bg-white py-0">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#topOfPage"">Home</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#youngPeople">Mental Health and Young People</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#keyInfo">Key Information</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#inContact">Sign Up!</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">Ask Us</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
         </header>
       </div>
       </header>
@@ -53,7 +70,7 @@
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
               
               <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">Your mental health can be affected by...</h1>
+                <h1 class="display-5 fw-bold lh-1 mb-3" id="pageTop">Your mental health can be affected by...</h1>
                   <!--from Mind.org.uk (2017)-->
                   <ul class="lead">
                     <li>Stress</li>
@@ -85,7 +102,9 @@
             </div>
           </div>
 
-          <section id="keyInfo">
+          <div class="b-example-divider mb-5" id="keyInfo"></div>
+
+          <section id="barChart">
             <div class="container aos-init aos-animate" data-aos="fade-up">
               <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100"> 
@@ -125,16 +144,17 @@
         <form>
           <!-- from Bootstrap - multiple inputs - form input group documentation -->
           <div class="input-group mb-3">
-            <span class="input-group-text">First and last name</span>
+            <span class="input-group-text col-sm-2">First and last name</span>
             <input type="text" aria-label="First name" class="form-control" id="first-name" required>
             <input type="text" aria-label="Last name" class="form-control" id="last-name" required>
           </div>
           <!-- from Bootstrap - basic example - form input group documentation -->
           <div class="input-group mb-3">
-            <span class="input-group-text">Email Address</span>
+            <span class="input-group-text col-sm-2">Email Address</span>
             <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" required>
           </div>
           <!-- from Bootstrap - default select - form select documentation -->
+
           <div class="mb-3">
           <label for="sourceInfo" class="form-label">How did you hear about us?</label>
           <select class="form-select" aria-label="Default select example" name="sourceInfo">
@@ -145,10 +165,11 @@
             <option value="4">Other</option>
           </select>
           </div>
+
             <!-- from Bootstrap - custom file input - form input group documentation -->
             <div class="mb-3">
                 <label for="formFileSm" class="form-label" required>This service is for students only - please upload a picture of your student ID for access to our support...</label>
-                <input class="form-control form-control-sm" id="formFileSm" type="file">
+                <input class="form-control form-control-sm col-sm-2" id="formFileSm" type="file">
             </div>
             <!-- from Bootstrap - default checkbox - checks and radios documentation -->
             <div class="form-check" required>
