@@ -1,4 +1,4 @@
-
+/* global d3 */
 document.getElementById('submitBtn').addEventListener('click', thankYouMsg)
 /** Function produces a 'thank you' message in response to the user clicking Submit after filling out their contact details. */
 function thankYouMsg () {
