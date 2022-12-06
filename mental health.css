@@ -9,8 +9,15 @@ img {
 
 @font-face {
     font-family: "My Custom Font";
-    src: url(SelamatPestaNatal.ttf) format("truetype");
+    src: url(fonts/SelamatPestaNatal.ttf) format("truetype");
 }
+
+#colourBack {
+    height: auto;
+    width: auto;
+}
+
+
 .customfont { 
     font-family: "My Custom Font", Verdana, Tahoma;
 }

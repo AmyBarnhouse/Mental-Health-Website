@@ -1,4 +1,17 @@
 /* global d3 */
+
+document.getElementById('colourBackStigma').addEventListener('mouseover', function () {
+  document.getElementById('colourBackStigma').style.backgroundColor = '#f8ebfa'
+})
+
+document.getElementById('colourBackIntro').addEventListener('mouseover', function () {
+  document.getElementById('colourBackIntro').style.backgroundColor = '#f8ebfa'
+})
+
+document.getElementById('colourBackTrend').addEventListener('mouseover', function () {
+  document.getElementById('colourBackTrend').style.backgroundColor = '#f8ebfa'
+})
+
 document.getElementById('submitBtn').addEventListener('click', thankYouMsg)
 /** Function produces a 'thank you' message in response to the user clicking Submit after filling out their contact details. */
 function thankYouMsg () {
