@@ -21,12 +21,7 @@ img {
 .customfont { 
     font-family: "My Custom Font", Verdana, Tahoma;
 }
-/* 
-.zoomLogo:hover {
-    -ms-transform: scale(1.5); /* IE 9 */
-    /* -webkit-transform: scale(1.5); /* Safari 3-8 */
-    /* transform: scale(1.5); */
-/* } */
+
 
 .zoom:hover {
     -ms-transform: scale(1.05); /* IE 9 */
@@ -148,4 +143,16 @@ form {
 
 .text-muted {
   color:#a643f7
+}
+
+#sun {
+  width:150px;
+  height:150px;
+  position:absolute
+}
+
+#myContainer {
+  width: auto;
+  height: 200px;
+  position: relative;
 }

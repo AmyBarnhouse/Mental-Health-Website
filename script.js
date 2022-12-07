@@ -31,6 +31,12 @@ function emailAlert () {
   alert('We promise to only send you helpful and relevant information.')
 }
 
+// document.querySelectorAll('colourChange').forEach(item{
+// item.addEventListener('mouseover', function(){
+//   document.querySelectorAll('colourChange').style.backgroundColor = '#f8ebfa'
+// })})
+
+
 // set the dimensions and margins of the graph
 const margin1 = { top: 30, right: 300, bottom: 30, left: 30 }
 const width1 = 500 - margin1.left - margin1.right
@@ -214,4 +220,21 @@ function popUp () {
 
   // After 3 seconds, remove the show class from DIV
   setTimeout(function () { x.className = x.className.replace('show', '') }, 3000)
+}
+
+let id = null
+function myMove () {
+  const elem = document.getElementById('sun')
+  let pos = 0
+  clearInterval(id)
+  id = setInterval(frame, 2)
+  function frame () {
+    if (pos == 1000) {
+      clearInterval(id)
+    } else {
+      pos++
+      // elem.style.top = pos + 'px';
+      elem.style.left = pos + 'px'
+    }
+  }
 }
