@@ -48,7 +48,7 @@ const svg1 = d3.select('#my_dataviz')
 // Read the data
 d3.csv('scatterDataset.csv', function (data1) {
   // List of groups (here I have one group per column)
-  const allGroup = ['Panic', 'Anxiety', 'Depression']
+  const allGroup = ['Insomnia', 'Anxiety', 'Depression']
 
   // Reformat the data: we need an array of arrays of {x, y} tuples
   const dataReady = allGroup.map(function (grpName) { // .map allows to do something for each element of the list
@@ -132,7 +132,7 @@ d3.csv('scatterDataset.csv', function (data1) {
     .enter()
     .append('g')
     .append('text')
-    .attr('x', function (d, i) { return 30 + i * 60 })
+    .attr('x', function (d, i) { return 30 + i * 80 })
     .attr('y', 30)
     .text(function (d) { return d.name })
     .style('fill', function (d) { return myColor(d.name) })
