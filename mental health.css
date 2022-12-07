@@ -12,14 +12,22 @@ img {
     src: url(fonts/SelamatPestaNatal.ttf) format("truetype");
 }
 
+#yoga-picture{
+  height:auto
+}
+
 #colourBack {
     height: auto;
     width: auto;
 }
 
 
-.customfont { 
+.customFontTitle { 
     font-family: "My Custom Font", Verdana, Tahoma;
+}
+
+body{
+  font-family: "SourceSerifPro-Light";
 }
 
 

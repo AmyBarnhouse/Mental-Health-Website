@@ -11,8 +11,9 @@
         <link href="mental health.css" rel="stylesheet">
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <link rel="stylesheet" href="fonts/SourceSerifPro-Light.ttf">
     </head>
-    <body>
+    <body class="customFontBody">
 <!-- Modal -->
       <header id="topOfPage">
       <!--from Boostrap - Base nav - navs and tabs documentation-->
@@ -21,7 +22,7 @@
           <nav class="navbar fixed-top navbar-expand-lg bg-white py-0">
             <div class="container-fluid">
               <!-- <div><h1 class="customfont">THE MINDFUL STUDENT</h1></div> -->
-              <a class="navbar-brand zoom" href="#topOfPage"><h1 class="customfont">THE MINDFUL STUDENT</h1></a>
+              <a class="navbar-brand zoom" href="#topOfPage"><h1 class="customFontTitle">THE MINDFUL STUDENT</h1></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -77,12 +78,18 @@
         <div class="container">
           <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              <div class="col-10 col-sm-8 col-lg-6">
-                <p>Select the different mental health problems to see how the percentage of people suffering differs by age.</p>
+              <div class="col-10 col-sm-8 col-lg-5">
+                <h2 class="display-5 fw-bold lh-1 mb-7">How the percentage of young people with mental health issues differs by age:</h2>
+                <p>Anxiety
+                  Anxiety disorders are one of the most commonly diagnosed mental health problems among students.
+                  Anxiety is what we feel when we are worried, tense or afraid – particularly about things that are about to happen, or which we think could happen in the future. Anxiety can become a mental health problem if it impacts on your ability to live your life as fully as you want to.
+                  Depression
+                  Depression is the most commonly diagnosed mental health problem among students. Depression is a low mood that lasts for a long time, and affects your everyday life.
+                  </p>
               </div>
-              <div class="col-lg-6">
-                <h1 class="display-5 fw-bold lh-1 mb-3">How the percentage of young people with mental health issues differs by age:</h1>
+              <div class="col-lg-7">
                 <div id="my_dataviz"></div>
+                <img src="images/relaxation.jpg" id="yoga-picture">
               </div>
             </div>
           </div>
