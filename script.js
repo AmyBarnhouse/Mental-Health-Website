@@ -1,4 +1,5 @@
 /* global d3 */
+/* global currentOpacity */
 
 document.getElementById('colourBackStigma').addEventListener('mouseover', function () {
   document.getElementById('colourBackStigma').style.backgroundColor = '#f8ebfa'
@@ -45,7 +46,7 @@ const svg1 = d3.select('#my_dataviz')
     'translate(' + margin1.left + ',' + margin1.top + ')')
 
 // Read the data
-d3.csv('scatter-dataset.csv', function (data1) {
+d3.csv('scatterDataset.csv', function (data1) {
   // List of groups (here I have one group per column)
   const allGroup = ['Panic', 'Anxiety', 'Depression']
 
@@ -142,9 +143,9 @@ d3.csv('scatter-dataset.csv', function (data1) {
       // Change the opacity: from 0 to 1 or from 1 to 0
       d3.selectAll('.' + d.name).transition().style('opacity', currentOpacity == 1 ? 0 : 1)
     })
-}) 
+})
 
- // set the dimensions and margins of the graph
+// set the dimensions and margins of the graph
 const margin = { top: 30, right: 30, bottom: 70, left: 60 }
 const width = 460 - margin.left - margin.right
 const height = 400 - margin.top - margin.bottom
@@ -172,9 +173,9 @@ const yAxis = svg.append('g')
   .attr('class', 'myYaxis')
 
 /** This function imports the dataset and presents it in a bar chart.  */
- function update (selectedVar) {
+function update (selectedVar) {
   // Parse the Data
-  d3.csv('dataset_final.csv', function (data) {
+  d3.csv('barChartDataset.csv', function (data) {
     // X axis
     x.domain(data.map(function (d) { return d.group }))
     xAxis.transition().duration(1000).call(d3.axisBottom(x))
@@ -202,15 +203,15 @@ const yAxis = svg.append('g')
 }
 
 // Initialize plot
-update('var1') 
+update('var1')
 
-function popUp() {
+function popUp () {
   // Get the snackbar DIV
-  var x = document.getElementById("snackbar");
+  const x = document.getElementById('snackbar')
 
   // Add the "show" class to DIV
-  x.className = "show";
+  x.className = 'show'
 
   // After 3 seconds, remove the show class from DIV
-  setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  setTimeout(function () { x.className = x.className.replace('show', '') }, 3000)
 }
