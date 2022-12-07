@@ -9,7 +9,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <!--from w3 schools, linking CSS page to HTML document-->
         <link href="mental health.css" rel="stylesheet">
-        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     </head>
 
     <body>
@@ -72,8 +73,8 @@
                 <img src="stone-picture.jpg" id="stone-picture" class="d-block mx-lg-auto img-fluid stone-picture" alt="Image of pebbles stacked up" loading="lazy">
               </div>
           </div>
-          
         </div>
+        <div id="my_dataviz"></div>
           <div class="b-example-divider" id="youngPeople"></div>
         
         <div class="container"><p></p></div>
@@ -96,7 +97,7 @@
         
 
           <section id="barChart">
-            <div class="container aos-init aos-animate" data-aos="fade-up"  id="colourBackTrend">
+            <div class="container aos-init aos-animate mb-5" data-aos="fade-up"  id="colourBackTrend">
               <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100"> 
 
