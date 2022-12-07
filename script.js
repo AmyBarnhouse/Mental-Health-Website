@@ -25,31 +25,19 @@ document.getElementById('colourBackTrend').addEventListener('mouseout', function
   document.getElementById('colourBackTrend').style.backgroundColor = '#fff'
 })
 
-/* document.getElementById('colourBackScatter').addEventListener('mouseover', function () {
-  document.getElementById('colourBackTrend').style.backgroundColor = '#f8ebfa'
+document.getElementById('colourBackScatter').addEventListener('mouseover', function () {
+  document.getElementById('colourBackScatter').style.backgroundColor = '#f8ebfa'
 })
 
 document.getElementById('colourBackScatter').addEventListener('mouseout', function () {
-  document.getElementById('colourBackStigma').style.backgroundColor = '#fff'
-}) */
+  document.getElementById('colourBackScatter').style.backgroundColor = '#fff'
+})
 
-// document.getElementById('emailMsg').addEventListener('click', emailAlert)
-// /** Displays alert to user when they click to put in their email address. */
-// function emailAlert () {
-//   alert('We promise to only send you helpful and relevant information.')
-// }
-
-// document.querySelectorAll('colourChange').forEach(item{
-// item.addEventListener('mouseover', function(){
-//   document.querySelectorAll('colourChange').style.backgroundColor = '#f8ebfa'
-// })})
-
-/* document.querySelectorAll('colourChange').forEach(item => {
-  item.addEventListener('mouseover', event => {
-    document.querySelectorAll('colourChange').style.backgroundColor = '#f8ebfa'
-  })
-}) */
-
+document.getElementById('emailMsg').addEventListener('click', emailAlert)
+/** Displays alert to user when they click to put in their email address. */
+function emailAlert () {
+  alert('We promise to only send you helpful and relevant information.')
+}
 
 // set the dimensions and margins of the graph
 const margin1 = { top: 30, right: 500, bottom: 30, left: 30 }
