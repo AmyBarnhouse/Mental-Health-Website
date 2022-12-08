@@ -9,19 +9,18 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <!--from w3 schools, linking CSS page to HTML document-->
         <link href="styles/styles.css" rel="stylesheet">
+        <!--linking to d3 for interactive visualisations-->
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
         <link rel="stylesheet" href="fonts/SourceSerifPro-Light.ttf">
     </head>
     <body class="customFontBody">
-<!-- Modal -->
       <header id="topOfPage">
-      <!--from Boostrap - Base nav - navs and tabs documentation-->
+      <!--from Boostrap - Base nav - https://getbootstrap.com/docs/5.2/components/navs-tabs/ -->
       <div class="container">
         <header class="d-flex flex-wrap justify-content-center py-5 mb-4 border-bottom">
           <nav class="navbar fixed-top navbar-expand-lg bg-white py-0">
             <div class="container-fluid">
-              <!-- <div><h1 class="customfont">THE MINDFUL STUDENT</h1></div> -->
               <a class="navbar-brand zoom" href="#topOfPage"><h1 class="customFontTitle">THE MINDFUL STUDENT</h1></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -29,6 +28,7 @@
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
+                    <!--zoom class enlarges navbar buttons on hover-->
                     <a class="nav-link active zoom" aria-current="page" href="#youngPeople">Mental Health and Young People</a>
                   </li>
                   <li class="nav-item">
@@ -41,20 +41,15 @@
                     <a class="nav-link active zoom" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">Ask Us</a>
                   </li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-success zoom" type="submit">Search</button>
-                </form>
               </div>
             </div>
           </nav>
         </header>
       </div>
       </header>
-        <!--from Bootstrap - Responsive right-aligned hero with image - Heroes documentation-->
+        <!--from Bootstrap - Responsive right-aligned hero with image - https://getbootstrap.com/docs/5.2/examples/heroes/ -->
         <div class="container col-xxl-8 px-4 py-5">
             <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-              
               <div class="col-lg-6" id="colourBackIntro">
                 <h1 class="display-5 fw-bold lh-1 mb-3" id="pageTop">Your mental health can be affected by...</h1>
                   <!--from Mind.org.uk (2017)-->
@@ -68,7 +63,7 @@
                     <li>Physical Disabilities</li>
                   </ul>
               </div>
-              <!-- unsplash image -->
+              <!-- unsplash image https://unsplash.com/photos/IJXEmyXbVew -->
               <div class="col-10 col-sm-8 col-lg-6 zoom">
                 <img src="media/stone-picture.jpg" id="stone-picture" class="d-block mx-lg-auto img-fluid stone-picture" alt="Image of pebbles stacked up" loading="lazy">
               </div>
@@ -93,7 +88,8 @@
               </div>
               <div class="col-lg-7">
                 <div id="my_dataviz"></div>
-                <img class="zoom" src="media/relaxation.jpg" id="yoga-picture">
+                <!--from pixabay https://pixabay.com/illustrations/relaxation-meditation-health-7282116/-->
+                <img class="zoom" src="media/relaxation.jpg" id="yoga-picture" alt="peaceful toga cartoon">
               </div>
             </div>
           </div>
@@ -104,7 +100,7 @@
         <div class="px-4 py-5 my-5 text-center">
           <!--from Mind.org.uk (2017)-->
             <h1 class="display-5">Dealing with the Stigma</h1>
-            <!-- from Bootstrap - centred screenshot - Heroes documentation -->
+            <!-- from Bootstrap - centred screenshot - https://getbootstrap.com/docs/5.2/examples/heroes/ -->
             <div class="col-lg-6 mx-auto">
               <p class="lead mb-4">Many people remain silent when it comes to tackling mental health problems. Through speaking out and sharing experiences, others can gain the confidence to contribute.</p>
               <p class="lead mb-4">Try to connect yourself with friends to prevent feeling isolated. There are many treatments available to you, delivered in different ways to suit preferences.</p>
@@ -129,7 +125,7 @@
                     <input type="radio" class="btn-check" onclick="update('var3')" name="btnradio" id="btnradio3" autocomplete="off">
                     <label class="btn btn-outline-primary" for="btnradio3">All</label>
                   </div>
-                  <!-- Create a div where the graph will take place -->
+                  <!--bar chart interactive visualisation here-->
                   <div id="barChartVisual"></div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
@@ -160,7 +156,7 @@
             <input type="text" aria-label="First name" class="form-control" id="first-name" required>
             <input type="text" aria-label="Last name" class="form-control" id="last-name" required>
           </div>
-          <!-- from Bootstrap - basic example - form input group documentation -->
+          <!-- from Bootstrap - basic example - https://getbootstrap.com/docs/5.2/forms/select/ -->
           <div class="input-group mb-3">
             <span class="input-group-text col-sm-2">Email Address</span>
             <input id="emailMsg" type="text" class="form-control" placeholder="name@example.com" required>
@@ -178,12 +174,12 @@
           </select>
           </div>
 
-            <!-- from Bootstrap - custom file input - form input group documentation -->
+            <!-- from Bootstrap - custom file input - https://getbootstrap.com/docs/5.2/forms/input-group/ -->
             <div class="mb-3">
                 <label for="formFileSm" class="form-label" required>This service is for students only - please upload a picture of your student ID for access to our support...</label>
                 <input class="form-control form-control-sm col-sm-2" id="formFileSm" type="file">
             </div>
-            <!-- from Bootstrap - default checkbox - checks and radios documentation -->
+            <!-- from Bootstrap - default checkbox - https://getbootstrap.com/docs/5.2/forms/checks-radios/ -->
             <div class="form-check" required>
               <input class="form-check-input" type="checkbox" value="">
               <label class="form-check-label" for="flexCheckDefault">
@@ -191,6 +187,7 @@
               </label>
             </div>
             <div>
+              <!--from w3schools - snackbar - https://www.w3schools.com/howto/howto_js_snackbar.asp -->
               <button class="w-20 btn btn-primary zoom float-end" type="submit" id="submitBtn" onclick="popUp() ;myMove()">Submit</button>
               <div id="snackbar">Thank you for signing up!</div>
               <div id="tests"></div>
@@ -199,10 +196,12 @@
         <div>
             <div id ="myContainer">
             <div>
+              <!-- from pixabay https://pixabay.com/illustrations/sun-smiley-cartoon-smile-happy-5839655/ -->
               <img src="media/cartoonSun.png" id="sun">
             </div>
             </div>
           </div>
+          <!-- from Bootstrap - footers example - https://getbootstrap.com/docs/5.2/examples/footers/ -->
         <footer class="py-3 my-4">
           <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="#topOfPage" class="nav-link px-2 text-muted">Home</a></li>
@@ -211,6 +210,7 @@
         </footer>
         <div id="qBox"></div>
         </div>
+        <!-- from Bootstrap - modal static backdrop - https://getbootstrap.com/docs/5.2/components/modal/ -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -230,17 +230,10 @@
             </div>
           </div>
         </div>
-        <!--From Bootstrap examples 2017-->   
+        <!--From Bootstrap examples 2017 - linking bootstrap to the code-->   
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
         <script src="scripts/script.js"></script>
     </body>
 </html>
 
-<!--References:
-Bootstrap(2022) 'Checks and radios'. Available at: https://github.com/twbs/bootstrap/blob/v5.2.2/site/content/docs/5.2/forms/checks-radios.md (Accessed: 14.11.2022).
-Boostrap (2022) 'Left-aligned nav'. Available at: https://getbootstrap.com/docs/5.2/components/navs-tabs/ (Accessed: 2.11.2022).
-Mind(2017) 'Mental health problems - an introduction'. Available at: https://www.mind.org.uk/information-support/types-of-mental-health-problems/mental-health-problems-introduction/causes/ (Accessed: 2.11.2022)
-freeCodeCamp (2022) '(New) Responsive Web Design'. Available at: https://www.freecodecamp.org/learn/2022/responsive-web-design/ (Accessed: 2.11.2022)
-Dönmez, B. Stone stack [Photograph]. Available at: https://unsplash.com/photos/eofm5R5f9Kw (Accessed: 2.11.2022)
-Bootstrap 'Heroes'. Available at: https://getbootstrap.com/docs/5.2/examples/heroes/ (Accessed: 2.11.2022)
--->
+<!-- References available in the README.txt file -->

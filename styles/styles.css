@@ -170,6 +170,7 @@ form {
 #sun {
   width:150px;
   height:150px;
+  position:absolute;
 }
 
 #myContainer {
@@ -177,3 +178,5 @@ form {
   height: 150px;
   position: relative;
 }
+
+/* References available in the README.txt file */
