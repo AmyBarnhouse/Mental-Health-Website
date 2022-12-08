@@ -54,7 +54,7 @@ const svg1 = d3.select('#my_dataviz')
     'translate(' + margin1.left + ',' + margin1.top + ')')
 
 // Read the data
-d3.csv('scatterDataset.csv', function (data1) {
+d3.csv('datasets/scatterDataset.csv', function (data1) {
   // List of groups (here I have one group per column)
   const allGroup = ['Insomnia', 'Anxiety', 'Depression']
 
@@ -183,7 +183,7 @@ const yAxis = svg.append('g')
 /** This function imports the dataset and presents it in a bar chart.  */
 function update (selectedVar) {
   // Parse the Data
-  d3.csv('barChartDataset.csv', function (data) {
+  d3.csv('datasets/barChartDataset.csv', function (data) {
     // X axis
     x.domain(data.map(function (d) { return d.group }))
     xAxis.transition().duration(1000).call(d3.axisBottom(x))
@@ -228,10 +228,11 @@ let id = null
 function myMove () {
   const elem = document.getElementById('sun')
   let pos = 0
+  console.log(window.innerWidth)
   clearInterval(id)
   id = setInterval(frame, 2)
   function frame () {
-    if (pos == 1000) {
+    if (pos == 200) {
       clearInterval(id)
     } else {
       pos++

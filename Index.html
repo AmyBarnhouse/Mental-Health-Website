@@ -8,7 +8,7 @@
         <!-- link for Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
         <!--from w3 schools, linking CSS page to HTML document-->
-        <link href="mental health.css" rel="stylesheet">
+        <link href="styles/styles.css" rel="stylesheet">
         <script src="https://d3js.org/d3.v4.js"></script>
         <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
         <link rel="stylesheet" href="fonts/SourceSerifPro-Light.ttf">
@@ -70,7 +70,7 @@
               </div>
               <!-- unsplash image -->
               <div class="col-10 col-sm-8 col-lg-6 zoom">
-                <img src="images/stone-picture.jpg" id="stone-picture" class="d-block mx-lg-auto img-fluid stone-picture" alt="Image of pebbles stacked up" loading="lazy">
+                <img src="media/stone-picture.jpg" id="stone-picture" class="d-block mx-lg-auto img-fluid stone-picture" alt="Image of pebbles stacked up" loading="lazy">
               </div>
           </div>
         </div>
@@ -93,7 +93,7 @@
               </div>
               <div class="col-lg-7">
                 <div id="my_dataviz"></div>
-                <img src="images/relaxation.jpg" id="yoga-picture">
+                <img class="zoom" src="media/relaxation.jpg" id="yoga-picture">
               </div>
             </div>
           </div>
@@ -119,15 +119,22 @@
             <div class="container aos-init aos-animate mb-5 colourChange" data-aos="fade-up"  id="colourBackTrend">
               <div class="row">
                 <div class="col-lg-6 order-1 order-lg-2 aos-init aos-animate" data-aos="fade-left" data-aos-delay="100">
-                  <button onclick="update('var1')">Girls</button>
-                  <button onclick="update('var2')">Boys</button>
-                  <button onclick="update('var3')">All</button>
+                  <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" onclick="update('var1')" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                    <label class="btn btn-outline-primary" for="btnradio1">Girls</label>
+                  
+                    <input type="radio" class="btn-check" onclick="update('var2')" name="btnradio" id="btnradio2" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio2">Boys</label>
+                  
+                    <input type="radio" class="btn-check" onclick="update('var3')" name="btnradio" id="btnradio3" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btnradio3">All</label>
+                  </div>
                   <!-- Create a div where the graph will take place -->
                   <div id="barChartVisual"></div>
                 </div>
                 <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content aos-init aos-animate" data-aos="fade-right" data-aos-delay="100">
                   <h3>TRENDS</h3>
-                  <p class="fst-italic">This graph illustrates the probability of children/young people having a mental disorder, based on whether or not they have sought help for mental concerns. The data has been split into age range, as well as gender. Select a viewing option to see noticeable trends.</p>
+                  <p class="fst-italic">This graph illustrates the probability of children/young people having a mental disorder, based on whether or not they have sought help for mental concerns. The data has been split into age range, as well as gender. Select a viewing option to see noticeable trends. a = people who didn't receive help. b = people who did receive help</p>
                   <ul>
                     <li>
                       <i class="ri-check-double-line"></i>The probability of disorder strongly decreases for those who don't seek help, but there is still a moderate percentage of young people left untreated.</li>
@@ -192,7 +199,7 @@
         <div>
             <div id ="myContainer">
             <div>
-              <img src="images/cartoonSun.png" id="sun">
+              <img src="media/cartoonSun.png" id="sun">
             </div>
             </div>
           </div>
@@ -225,7 +232,7 @@
         </div>
         <!--From Bootstrap examples 2017-->   
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script src="scripts/script.js"></script>
     </body>
 </html>
 
